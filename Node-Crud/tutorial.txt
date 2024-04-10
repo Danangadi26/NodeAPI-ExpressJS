@@ -1,0 +1,27 @@
+PreInstall : 
+1. Menginstall node modules dengan perintah npm init -y
+2. Menginstall express js dengan perintah npm i express
+3. Menginstall nodemon dengan perintah npm i nodemon
+4. Tambahkan script dibawah didalam package.json
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+5. Test node app dengan perintah npm run dev 
+6. Ketikkan pada browser localhost:3000
+7. Install mongodb dengan perintah npm i mongodb
+8. install mongoose dengan perintah npm i mongoose
+9. Connect node to mongodb dengan perintah
+mongoose
+  .connect(
+    "mongodb+srv://danangsmkn26:<Password>@nodeapi.cjbmert.mongodb.net/?retryWrites=true&w=majority&appName=NodeAPI"
+  )
+  .then(() => {
+    console.log("Connected to Databases");
+    app.listen(3000, () => {
+      console.log("Server Running");
+    });
+  })
+  .catch(() => {
+    console.log("Connected failed");
+  });
